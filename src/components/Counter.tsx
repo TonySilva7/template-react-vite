@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 import {
   decrement,
   increment,
-  incrementByAmount,
   incrementAsync,
+  incrementByAmount,
   incrementIfOdd,
   selectCount,
-} from "../features/counter/counterSlice";
+} from '../features/counter/counterSlice';
 
 export default function Counter(): JSX.Element {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
-  const [incrementAmount, setIncrementAmount] = useState("2");
+  const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
 
