@@ -2,27 +2,34 @@ import './App.css';
 
 import { useEffect, useState } from 'react';
 
+import { IUsers } from './@types/user';
 import Counter from './components/Counter';
+import { getProducts } from './services/products';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [isOn, setIsOn] = useState(false);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prevCount) => prevCount + 1);
-    }, 1000);
+    async function foo(): Promise<void> {
+      const data = await getProducts();
+      setUsers(data);
+    }
 
-    if (isOn) alert('Timer is on');
-
-    return () => clearInterval(interval);
-  }, [isOn]);
+    foo();
+  }, []);
 
   return (
     <div>
-      Ready to code!
-      {'Nove'}
+      <h1>Ready to code!</h1>
       <Counter />
+      <h2>Lista de Usuários</h2>
+      <ul>
+        {users.map((user: IUsers) => (
+          <li key={user.id}>
+            {user.name} | {user.email}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
