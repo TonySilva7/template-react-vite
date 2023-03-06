@@ -16,7 +16,7 @@ function App() {
     if (isOn) alert('Timer is on');
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isOn]);
 
   return (
     <div>
