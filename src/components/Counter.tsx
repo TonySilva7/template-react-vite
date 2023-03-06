@@ -9,6 +9,7 @@ import {
   incrementIfOdd,
   selectCount,
 } from '../features/counter/counterSlice';
+import { Button } from './styles';
 
 export default function Counter(): JSX.Element {
   const count = useAppSelector(selectCount);
@@ -20,23 +21,25 @@ export default function Counter(): JSX.Element {
   return (
     <div>
       <div className="flex w-min px-4 py-2 rounded-lg shadow-md items-center justify-center gap-4 bg-gray-400 mx-auto mt-8">
-        <button
+        <Button
+          bg="red"
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
           className="py-1 px-3 min-w-[4rem] bg-red-400 text-white text-3xl cursor-pointer hover:bg-red-600 rounded-md"
         >
           -
-        </button>
+        </Button>
         <span className="bg-gray-200 text-gray-600 px-8 py-2 text-3xl rounded-md shadow-inner">
           {count}
         </span>
-        <button
+        <Button
+          bg="green"
           aria-label="Increment value"
           className="py-1 px-3 min-w-[4rem] bg-green-400 text-white text-3xl cursor-pointer hover:bg-green-600 rounded-md"
           onClick={() => dispatch(increment())}
         >
           +
-        </button>
+        </Button>
       </div>
       <div className="flex w-max px-4 py-2 rounded-lg shadow-md items-center justify-center gap-4 bg-gray-400 mx-auto mt-8">
         <input
