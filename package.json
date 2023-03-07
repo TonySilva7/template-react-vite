@@ -13,12 +13,6 @@
     "lint": "yarn lint:format && yarn lint:fix ",
     "commitmsg": "commitlint -E HUSKY_GIT_PARAMS"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged",
-      "pre-push": "yarn test"
-    }
-  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@types/styled-components": "^5.1.26",
