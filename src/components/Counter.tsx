@@ -17,7 +17,6 @@ export default function Counter(): JSX.Element {
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
-
   return (
     <div>
       <div className="flex w-min px-4 py-2 rounded-lg shadow-md items-center justify-center gap-4 bg-gray-400 mx-auto mt-8">
