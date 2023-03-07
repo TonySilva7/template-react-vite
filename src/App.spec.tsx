@@ -18,6 +18,6 @@ describe('App', () => {
         </ThemeProvider>
       </Provider>,
     );
-    expect(screen.getByText('Ready to codes!')).toBeInTheDocument();
+    expect(screen.getByText('Ready to code!')).toBeInTheDocument();
   });
 });
