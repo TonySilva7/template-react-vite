@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start:dev": "vite --host",
-    "test": "vitest",
+    "test": "vitest run",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
