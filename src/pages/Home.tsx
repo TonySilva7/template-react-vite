@@ -16,7 +16,15 @@ export const Home = () => {
     foo();
   }, []);
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        border: 'solid 1px red',
+        flexDirection: 'column',
+      }}
+    >
       <h1>Ready to code!</h1>
       <Counter />
       <h2>Lista de Usuários</h2>
