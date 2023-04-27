@@ -15,7 +15,7 @@ export function PrivateRouteWithChildren({ children }: MyRouteProps): JSX.Elemen
 */
 
 export function PrivateRoute() {
-  const auth = true;
+  const auth = false;
 
   if (!auth) alert('Você não tem permissão para acessar essa página!');
 
